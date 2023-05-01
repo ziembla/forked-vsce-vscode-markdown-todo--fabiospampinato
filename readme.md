@@ -1,3 +1,21 @@
+![CAUTION](https://placehold.co/700x100/FF0000/FFFF00?text=!!!+CAUTION+!!!)
+
+This is just a private fork for specific customization of the original extension!
+
+The main identifier was changed to avoid collision with the original extension's releases.
+
+Most other contributions are left as they were thus would interfere with the original extension.
+
+Most probably not what you'd like to use.
+
+Go to  
+https://github.com/fabiospampinato/vscode-markdown-todo  
+or  
+https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-markdown-todo  
+for the real thing!
+
+![CAUTION](https://placehold.co/700x100/FF0000/FFFF00?text=!!!+CAUTION+!!!)
+
 # Markdown Todo
 
 <p align="center">

@@ -1,12 +1,12 @@
 {
-  "name": "vscode-markdown-todo",
+  "name": "fabiospampinato--vscode-markdown-todo",
   "displayName": "Markdown Todo",
   "description": "Manage todo lists inside markdown files with ease.",
   "icon": "resources/logo-128x128.png",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "main": "out/extension.js",
-  "publisher": "fabiospampinato",
+  "publisher": "ziembla",
   "activationEvents": [
     "onLanguage:markdown"
   ],
@@ -83,7 +83,8 @@
     "compile": "webpack --mode development",
     "compile:watch": "webpack --mode development --watch",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "node ./node_modules/vscode/bin/test",
+    "package": "vsce package"
   },
   "bugs": {
     "url": "https://github.com/fabiospampinato/vscode-markdown-todo/issues"
