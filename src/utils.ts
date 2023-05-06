@@ -11,7 +11,7 @@ const Utils = {
 
   initCommands ( context: vscode.ExtensionContext ) {
 
-    const {commands} = vscode.extensions.getExtension ( 'fabiospampinato.vscode-markdown-todo' ).packageJSON.contributes;
+    const {commands} = vscode.extensions.getExtension ( 'ziembla.fabiospampinato--vscode-markdown-todo' ).packageJSON.contributes;
 
     commands.forEach ( ({ command, title }) => {
 
