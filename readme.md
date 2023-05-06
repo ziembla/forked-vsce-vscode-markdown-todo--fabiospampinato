@@ -14,6 +14,11 @@ or
 https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-markdown-todo  
 for the real thing!
 
+Incorporated changes:
+
+* publisher identification changed to indicate usage of the forked version
+* removed fundraising beggar
+
 ![CAUTION](https://placehold.co/700x100/FF0000/FFFF00?text=!!!+CAUTION+!!!)
 
 # Markdown Todo
