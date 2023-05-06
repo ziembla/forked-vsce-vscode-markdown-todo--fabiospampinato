@@ -30,6 +30,20 @@ Incorporated changes:
   - `[+]` - `pratially done`
 * added *backwards* status change command mapped to `Alt+Shift+d`
 
+* recommended usage with `fabiospampinato.vscode-highlight` extension (see: https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-highlight see: https://github.com/fabiospampinato/vscode-highlight) and configuration similar to:
+```
+"highlight.regexes": {
+    "(\\s*-\\s\\[ \\].*)":   { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#e40ee4", "fontWeight": "normal" }] },
+    "(\\s*-\\s\\[x\\].*)":   { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#666666", "fontWeight": "normal" }] },
+    "(\\s*-\\s\\[!\\].*)":   { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#ff1212", "fontWeight": "bold" }] },
+    "(\\s*-\\s\\[\\?\\].*)": { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#4cbc0b", "fontWeight": "bold" }] },
+    "(\\s*-\\s\\[\\^\\].*)": { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#08d4e2", "fontWeight": "normal" }] },
+    "(\\s*-\\s\\[-\\].*)":   { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#989898", "fontStyle":  "italic" }] },
+    "(\\s*-\\s\\[>\\].*)":   { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#8888ee", "fontWeight": "normal" }] },
+    "(\\s*-\\s\\[\\+\\].*)": { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#88aa88", "fontWeight": "normal" }] },
+}
+```
+
 ![CAUTION](https://placehold.co/700x100/FF0000/FFFF00?text=!!!+CAUTION+!!!)
 
 # Markdown Todo
