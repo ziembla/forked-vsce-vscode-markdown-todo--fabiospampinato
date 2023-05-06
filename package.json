@@ -3,7 +3,7 @@
   "displayName": "Markdown Todo",
   "description": "Manage todo lists inside markdown files with ease.",
   "icon": "resources/logo-128x128.png",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "license": "MIT",
   "main": "out/extension.js",
   "publisher": "ziembla",
@@ -24,15 +24,6 @@
           ],
           "description": "Todo bullet symbol",
           "default": "-"
-        },
-        "markdown.todo.symbols.done": {
-          "type": "string",
-          "enum": [
-            "x",
-            "X"
-          ],
-          "description": "Todo done symbol",
-          "default": "x"
         }
       }
     },
@@ -44,6 +35,10 @@
       {
         "command": "markdown.todo.toggleDone",
         "title": "Markdown Todo: Toggle Done"
+      },
+      {
+        "command": "markdown.todo.toggleDoneBack",
+        "title": "Markdown Todo: Toggle Done Backwards"
       }
     ],
     "keybindings": [
@@ -62,6 +57,11 @@
         "command": "markdown.todo.toggleDone",
         "key": "Alt+d",
         "when": "editorTextFocus && editorLangId == markdown"
+      },
+      {
+        "command": "markdown.todo.toggleDoneBack",
+        "key": "Alt+Shift+d",
+        "when": "editorTextFocus && editorLangId == markdown"
       }
     ],
     "menus": {
@@ -72,6 +72,10 @@
         },
         {
           "command": "markdown.todo.toggleDone",
+          "when": "editorLangId == markdown"
+        },
+        {
+          "command": "markdown.todo.toggleDoneBack",
           "when": "editorLangId == markdown"
         }
       ]

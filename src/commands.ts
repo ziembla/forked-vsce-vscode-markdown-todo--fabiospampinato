@@ -48,29 +48,54 @@ async function toggleRules ( ...rules ) {
 function toggleTodo () {
 
   const {bullet} = Consts.symbols,
-        {line, todoBox, todoDone} = Consts.regexes;
+        {line, todoBox, todoAny} = Consts.regexes;
 
   toggleRules (
     [todoBox, '$1$3'],
-    [todoDone, `$1${bullet} [ ] $3`],
-    [line, `$1${bullet} [ ] $3`]
+    [todoAny, `$1${bullet} [ ] $3`],
+    [line,    `$1${bullet} [ ] $3`]
   );
 
 }
 
 function toggleDone () {
 
-  const {bullet, done} = Consts.symbols,
-        {line, todoBox, todoDone} = Consts.regexes;
+  const {bullet} = Consts.symbols,
+        {line, todoBox, todoDone, todoNow, todoSoon, todoWait, todoDel, todoMove, todoPart} = Consts.regexes;
 
   toggleRules (
-    [todoDone, `$1${bullet} [ ] $3`],
-    [todoBox, `$1${bullet} [${done}] $3`],
-    [line, `$1${bullet} [${done}] $3`]
+    [todoBox,   `$1${bullet} [x] $3`],
+    [todoDone,  `$1${bullet} [!] $3`],
+    [todoNow,   `$1${bullet} [?] $3`],
+    [todoSoon,  `$1${bullet} [^] $3`],
+    [todoWait,  `$1${bullet} [-] $3`],
+    [todoDel,   `$1${bullet} [>] $3`],
+    [todoMove,  `$1${bullet} [+] $3`],
+    [todoPart,  `$1${bullet} [ ] $3`],
+
+    [line,      `$1${bullet} [x] $3`],
+  );
+
+}
+
+function toggleDoneBack () {
+
+  const {bullet} = Consts.symbols,
+        {line, todoBox, todoDone, todoNow, todoSoon, todoWait, todoDel, todoMove, todoPart} = Consts.regexes;
+
+  toggleRules (
+    [todoPart,  `$1${bullet} [>] $3`],
+    [todoMove,  `$1${bullet} [-] $3`],
+    [todoDel,   `$1${bullet} [^] $3`],
+    [todoWait,  `$1${bullet} [?] $3`],
+    [todoSoon,  `$1${bullet} [!] $3`],
+    [todoNow,   `$1${bullet} [x] $3`],
+    [todoDone,  `$1${bullet} [ ] $3`],
+    [todoBox,   `$1${bullet} [+] $3`],
   );
 
 }
 
 /* EXPORT */
 
-export {toggleTodo, toggleDone};
+export {toggleTodo, toggleDone, toggleDoneBack};

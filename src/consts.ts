@@ -13,14 +13,19 @@ const Consts = {
     return {
       languageId: 'markdown',
       symbols: {
-        bullet: Config.getKey ( 'symbols.bullet' ),
-        done: Config.getKey ( 'symbols.done' )
+        bullet: Config.getKey ( 'symbols.bullet' )
       },
       regexes: {
-        line: /^(\s*)([*+-]?\s*)(.*)$/,
-        todo: /^(\s*)([*+-]\s+\[[ xX]\]\s*)(.*)$/,
-        todoBox: /^(\s*)([*+-]\s+\[ \]\s*)(.*)$/,
-        todoDone: /^(\s*)([*+-]\s+\[[xX]\]\s*)(.*)$/
+        line:       /^(\s*)([*+-]?\s*)(.*)$/,
+        todoBox:    /^(\s*)([*+-]\s+\[ \]\s*)(.*)$/,
+        todoDone:   /^(\s*)([*+-]\s+\[[x]\]\s*)(.*)$/,
+        todoNow:    /^(\s*)([*+-]\s+\[[!]\]\s*)(.*)$/,
+        todoSoon:   /^(\s*)([*+-]\s+\[[\\?]\]\s*)(.*)$/,
+        todoWait:   /^(\s*)([*+-]\s+\[[\\^]\]\s*)(.*)$/,
+        todoDel:    /^(\s*)([*+-]\s+\[[-]\]\s*)(.*)$/,
+        todoMove:   /^(\s*)([*+-]\s+\[[>]\]\s*)(.*)$/,
+        todoPart:   /^(\s*)([*+-]\s+\[[+]\]\s*)(.*)$/,
+        todoAny:    /^(\s*)([*+-]\s+\[[x!\\?\\^>+-]\]\s*)(.*)$/,
       }
     };
 

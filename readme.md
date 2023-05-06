@@ -19,6 +19,17 @@ Incorporated changes:
 * publisher identification changed to indicate usage of the forked version
 * removed fundraising beggar
 
+* added extended task *lifecycle* in place of single `done` status:
+  - `[ ]` - new, `empty`
+  - `[x]` - `done`
+  - `[!]` - urgent, `now`
+  - `[?]` - current, `soon`
+  - `[^]` - waiting
+  - `[-]` - rejected, `deleted`
+  - `[>]` - cloned to other place, `moved`
+  - `[+]` - `pratially done`
+* added *backwards* status change command mapped to `Alt+Shift+d`
+
 ![CAUTION](https://placehold.co/700x100/FF0000/FFFF00?text=!!!+CAUTION+!!!)
 
 # Markdown Todo
