@@ -30,7 +30,10 @@ Incorporated changes:
   - `[+]` - `pratially done`
 * added *backwards* status change command mapped to `Alt+Shift+d`
 
-* recommended usage with `fabiospampinato.vscode-highlight` extension (see: https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-highlight see: https://github.com/fabiospampinato/vscode-highlight) and configuration similar to:
+* recommended usage with `fabiospampinato.vscode-highlight` extension  
+https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-highlight  
+https://github.com/fabiospampinato/vscode-highlight  
+and configuration similar to:
 ```
 "highlight.regexes": {
     "(\\s*-\\s\\[ \\].*)":   { "filterFileRegex": "[.]md$", "decorations": [{ "color": "#e40ee4", "fontWeight": "normal" }] },
