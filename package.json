@@ -86,16 +86,13 @@
     "test": "node ./node_modules/vscode/bin/test",
     "package": "vsce package"
   },
-  "bugs": {
-    "url": "https://github.com/fabiospampinato/vscode-markdown-todo/issues"
-  },
   "author": {
     "name": "Fabio Spampinato",
     "email": "spampinabio@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fabiospampinato/vscode-markdown-todo.git"
+    "url": "https://github.com/ziembla/forked-vsce-vscode-markdown-todo--fabiospampinato.git"
   },
   "engines": {
     "vscode": "^1.15.0"
